@@ -8,7 +8,7 @@ from flask import Response
 
 # instantiate db object
 db = SQLAlchemy()
-app = create_app()
+# app = create_app()
 
 
 def create_app():
@@ -18,8 +18,9 @@ def create_app():
     migrate = Migrate(app, db)
     app.config['CORS_HEADERS'] = 'Content-Type'
 
-    app.config['SECRET_KEY'] = "SECRET KEY (GOES HERE"
-    app.config["DATABASE_URL"] = 'postgres://tiarfmxauowdee:d1766d70efb424158f2f762d4d415ec2e50d30f053ba4aca1276ca972675bd96@ec2-54-210-128-153.compute-1.amazonaws.com:5432/d927mckh2fbb57'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SECRET_KEY'] = 'APP_SECRET_KEY'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URL'
     # instantiate app
     db.init_app(app)
 
