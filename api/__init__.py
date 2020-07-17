@@ -37,3 +37,6 @@ def create_app():
     app.register_blueprint(api)
 
     return app
+
+    def getApp():
+    return app
