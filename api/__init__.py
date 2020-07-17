@@ -8,7 +8,7 @@ from flask import Response
 
 # instantiate db object
 db = SQLAlchemy()
-# app = create_app()
+app = create_app()
 
 
 def create_app():
@@ -38,6 +38,3 @@ def create_app():
     app.register_blueprint(api)
 
     return app
-
-    def getApp():
-        return app
