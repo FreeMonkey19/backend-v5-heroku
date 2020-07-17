@@ -4,13 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import flask_login
 from flask import Response
+from catalog import getApp
 
 
 # instantiate db object
 db = SQLAlchemy()
-
-
-
+app = create_app()
 
 
 def create_app():
