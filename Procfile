@@ -1,2 +1,2 @@
 web: gunicorn init:app
-release: python api/models.py db upgraed
+release: python models.py db upgraed
