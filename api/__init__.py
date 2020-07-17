@@ -19,7 +19,7 @@ def create_app():
     app.config['CORS_HEADERS'] = 'Content-Type'
 
     app.config['SECRET_KEY'] = "SECRET KEY (GOES HERE"
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://tiarfmxauowdee:d1766d70efb424158f2f762d4d415ec2e50d30f053ba4aca1276ca972675bd96@ec2-54-210-128-153.compute-1.amazonaws.com:5432/d927mckh2fbb57'
+    app.config["DATABASE_URL"] = 'postgres://tiarfmxauowdee:d1766d70efb424158f2f762d4d415ec2e50d30f053ba4aca1276ca972675bd96@ec2-54-210-128-153.compute-1.amazonaws.com:5432/d927mckh2fbb57'
     # instantiate app
     db.init_app(app)
 
