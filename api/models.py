@@ -1,4 +1,4 @@
-from init.py import db
+from __init__.py import db
 
 
 class user_data(db.Model):
