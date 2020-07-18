@@ -5,6 +5,7 @@ from . import db
 from flask_cors import CORS, cross_origin
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_required
+from flask import os
 
 from .models import job_listings
 from .models import user_data

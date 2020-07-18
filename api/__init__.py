@@ -1,6 +1,7 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask import os
 
 from flask_cors import CORS, cross_origin
 from flask_migrate import Migrate
