@@ -2,7 +2,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-
 from flask_cors import CORS, cross_origin
 from flask_migrate import Migrate
 import flask_login
@@ -23,7 +22,7 @@ def create_app():
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'APP_SECRET_KEY'
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ[ DATABASE_URL ]
     # instantiate app
     db.init_app(app)
 
@@ -43,4 +42,3 @@ def create_app():
     return app
 
 app = create_app()
-
