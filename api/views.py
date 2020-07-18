@@ -71,6 +71,8 @@ def login():
 
 @ api.route("/api/users")
 def users():
+    print('******************************')
+    print('DATABASE_URL')
     # query db table
     user_list = user_data.query.all()
     users = []
