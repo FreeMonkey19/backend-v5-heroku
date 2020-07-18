@@ -6,6 +6,8 @@ from flask_cors import CORS, cross_origin
 from flask_migrate import Migrate
 import flask_login
 from flask import Response
+from . import db
+
 
 
 # instantiate db object
@@ -29,7 +31,6 @@ def create_app():
     login_manager = flask_login.LoginManager()
     login_manager.login_view = 'api.login'
     login_manager.init_app(app)
-    from . import db
     from .models import user_data
 
     @login_manager.user_loader
