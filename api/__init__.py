@@ -1,6 +1,8 @@
+
 from flask import Flask
-from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
+
+from flask_cors import CORS, cross_origin
 from flask_migrate import Migrate
 import flask_login
 from flask import Response
@@ -40,3 +42,4 @@ def create_app():
     return app
 
 app = create_app()
+
