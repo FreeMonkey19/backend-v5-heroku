@@ -9,7 +9,6 @@ from flask import Response
 
 
 
-
 # instantiate db object
 db = SQLAlchemy()
 
@@ -43,5 +42,4 @@ def create_app():
 
     return app
 
-def getApp():
-    return app
+app = create_app()
