@@ -20,7 +20,7 @@ def create_app():
     app = Flask(__name__)
     cors = CORS(app, supports_credentials=True)
 
-    migrate = Migrate(app, db)
+    migrate = Migrate(app, db, compare_type=True)
     app.config['CORS_HEADERS'] = 'Content-Type'
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
