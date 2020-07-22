@@ -63,8 +63,9 @@ def login():
     # print(password)
 
     user = user_data.query.filter_by(email=user_email).first()
-    password = user.password
+    print('this is user before user.password')
     print(user)
+    password = user.password
     # check if user exists
     # take user password, hash it and compare it to hashed password in db
     print("password hash")
